@@ -1,6 +1,27 @@
-img {
-    width: 200px;
-    height: 200px;
+#container {
+    text-align: center;
+    min-height: 400px;
+    min-width: 400px;
+    position: relative;
+}
+
+#image {
+    position:absolute;
+    left:25%;
+    top:0;
+    width:50%;
+    height:90%;
+}
+
+#text
+{
+    z-index:100;
+    position:absolute;    
+    color:black;
+    font-size:24px;
+    font-weight:bold;
+    left:150px;
+    top:350px;
 }
 
 h1 {
@@ -9,23 +30,6 @@ h1 {
 
 p {
     font-size: 1.5em;
-}
-
-.facts {
-    font-size: 1.25em;
-}
-
-#color {
-    color: blue;
-}
-
-button {
-    width: 100px;
-    height:  50px;
-}
-
-#container {
-    text-align: center;
 }
 
 

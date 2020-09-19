@@ -1,5 +1,4 @@
 # Views at the end of Workshop 2
-
 from my_app import app, db
 from flask import render_template, request, redirect
 from my_app.models import Fact, Post
@@ -7,9 +6,9 @@ from flask_socketio import SocketIO
 
 socketio = SocketIO(app)
 
-name="My Name"
-facts = {"Birthday":"September 18th, 2020", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = []
+name="Enlighten Me"
+facts = {"Birthday":"February 29, 1964", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
+posts = [{"title": "Topic:", "description": "enter controversial topic"}]
 
 @app.route("/")
 def index():
@@ -91,3 +90,4 @@ def change_facts():
                 db.session.add(new_fact)
         db.session.commit()
     return redirect("/")
+

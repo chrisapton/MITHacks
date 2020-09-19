@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#post-button").click(function() {
-        const url = "http://localhost:5000/post";
+        const url = "http://localhost:4999/post";
         const postInfo = {
             title: $("#title").val(),
             description: $("#description").val()
