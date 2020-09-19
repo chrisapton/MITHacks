@@ -3,6 +3,9 @@
 from my_app import app, db
 from flask import render_template, request, redirect
 from my_app.models import Fact, Post
+from flask_socketio import SocketIO
+
+socketio = SocketIO(app)
 
 name="My Name"
 facts = {"Birthday":"September 18th, 2020", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
@@ -33,6 +36,14 @@ def index():
     post_list = [{"title": post.title, "description": post.description} for post in db_posts]
 
     return render_template("index.html", name=name, facts=fact_dict, posts=post_list)
+
+def messageReceived(methods=['GET', 'POST']):
+    print('message was received!!!')
+
+@socketio.on('my event')
+def handle_my_custom_event(json, methods=['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('my response', json, callback=messageReceived)
 
 @app.route("/change_name")
 def change_name():
