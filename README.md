@@ -12,13 +12,13 @@ The HackMIT 2020 Beginner Workshop will be a crash course into the basics of cre
 **Topics**
 
 The breakdown of topics for each workshop:
-1. Friday, Midnight (aka Sat 12:00 AM): Workshop 1
+1. Friday, 12:00 AM: Workshop 1
     * Intro to using Git
     * Creating a frontend with HTML/CSS
-2. Saturday, 10:00 AM: Workshop 2
+2. Saturday, 10:00 PM: Workshop 2
     * Creating a backend with Flask
     * Connecting it all with Javascript
-3. Saturday, 11:15 AM: Workshop 3
+3. Saturday, 11:15 PM: Workshop 3
     * Using databases
     * Intro to APIs
 
@@ -83,7 +83,7 @@ Example output: `pip 19.2.3 from /home/<path to python>/python3.8/site-packages/
 
 
 #### 7. Install Requirements File
-In your terminal, navigate to the root directory of this repository, `cd beginner-workshop-2020`
+In your terminal, navigate to the root directory of this repository. 
 
 Run `pip install -r requirements.txt` in the command line to install all of the requirements contained in this file.
 
@@ -102,46 +102,3 @@ It should run without errors. Navigate to `localhost:5000` in a web browser. You
 ## Troubleshooting
 
 If you are having trouble setting up, or have any questions about the workshop, feel free to email **help@hackmit.org** or join our [Event Slack](https://join.slack.com/t/hackmit2020/shared_invite/zt-gjlojqk6-vwId_VUJpCS3ZcAmxr_3sQ) and use the *#beginner* channel.
-
-
-## Resources
-
-#### From the workshop
-* Beginner Slides: https://go.hackmit.org/beginner-github
-* Code from the workshop are on branches **workshop1**, **workshop2**, **final** (commands to checkout branches are on the slides!)
-
-#### Git
-* Git basic commands overview: https://training.github.com/downloads/github-git-cheat-sheet/
-* Git detailed cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
-* Git documentation: https://git-scm.com/about
-* Git tutorial: https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
-
-
-#### HTML/CSS
-* Best go to website for HTML/CSS reference and tutorials: https://www.w3schools.com/
-* CSS Cheat Sheet: https://websitesetup.org/wp-content/uploads/2019/11/wsu-css-cheat-sheet-gdocs.pdf
-* My favorite CSS tutorial on Flexboxes (makes life with CSS easier): https://flexboxfroggy.com/
-* Semantic Ui: https://semantic-ui.com/
-CSS import tag: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">`
-* JS import tag: `<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>`
-* Bootstrap: https://getbootstrap.com/docs/4.5/getting-started/introduction/
-
-
-#### Flask:
-* My favorite flask tutorial: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-* Flask Documentation + Official Tutorial: https://flask.palletsprojects.com/en/1.1.x/
-
-
-#### JS + Jquery
-* Jquery documentation: 
-* Javascript tutorial: https://javascript.info/
-* Javascript functions cheat sheet: https://htmlcheatsheet.com/js/
-  * Import link: `<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>`
-** note: "CDN" stands for "Content Delivery Network", CDNs host a lot of libraries you can import anytime. When you need the link, just google "<library name> CDN" and you should be able to find a link
-
-
-#### Databases:
-Tutorial of using databases with Flask: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database
-
-#### APIs:
-* List of Public APIs you can play with: https://github.com/public-apis/public-apis
