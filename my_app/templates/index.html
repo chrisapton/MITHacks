@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="../static/main.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="../static/script.js"></script>
+  <script type="text/javascript" src="{{
+    url_for('static', filename='../static/js/api.js') }}"></script>
 </head>
 
 <body>
   <!----------Header---------->
   <div id="container">
+<<<<<<< HEAD
     <h1>{{name}}</h1> <!--just says "Enlighten Me"-->
+=======
+    <h1>{{name}}</h1>
+    
+    <img src="https://i.ibb.co/q9jNDpF/119202528-356931955689583-5869759538756809981-n-2.jpg">
+>>>>>>> 9f9d510c6831cf5ad3639a967c8283baa5a5c08a
 
     <!--image and prompt text-->
     <div id="container"> 
@@ -23,6 +31,27 @@
         
     </div>
 
+<<<<<<< HEAD
+=======
+    {% for key, value in facts.items() %}
+      <p class="facts">{{key}}: {{value}}</p>
+    {% endfor %}
+
+    Title: <input type="text" id="title"><br>
+    Description: <input type="text" id="description"><br>
+    <div class="ui button" id="post-button">Post</div>
+    {% for post in posts %}
+      <div class="post">
+        <div class="ui segment">
+          <h3>{{post['title']}}</h3>
+          <p>{{post['description']}}</p>
+        </div>
+      </div>
+    {% endfor %}
+    <p>Click this button for a random cat 🐱</p>
+    <button style="margin-bottom: 10px;"id="cat-button" type="button">CAT</button>
+    <div id="cat-div"></div>
+>>>>>>> 9f9d510c6831cf5ad3639a967c8283baa5a5c08a
   </div>
 
   <!----------Chat Box---------->
