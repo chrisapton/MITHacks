@@ -1,14 +1,16 @@
 #container {
     text-align: center;
-    height: 400px;
-    width: 400px;
+    min-height: 400px;
+    min-width: 400px;
     position: relative;
 }
 
 #image {
     position:absolute;
-    left:0;
+    left:25%;
     top:0;
+    width:50%;
+    height:90%;
 }
 
 #text
@@ -31,12 +33,8 @@ p {
 }
 
 
-
-<<<<<<< HEAD
-=======
 .post {
     margin-top: 75px !important;
     width: 50%;
     margin: auto;
 }
->>>>>>> 9f9d510c6831cf5ad3639a967c8283baa5a5c08a
