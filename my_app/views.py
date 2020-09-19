@@ -2,13 +2,9 @@ from my_app import app
 from flask import render_template, request, redirect
 import requests
 
-name="Justin Yu"
-facts = {"Birthday":"April 10th, 2000", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = [{"title": "This is my 1st post!", "description": "this is my first description!"}]
-
-name="Shirlyn"
+name="Enlighten Me"
 facts = {"Birthday":"February 29, 1964", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = [{"title": "This is my 1st post!", "description": "this is my first description!"}]
+posts = [{"title": "Topic:", "description": "enter controversial topic"}]
 
 @app.route("/")
 def index():
@@ -29,3 +25,4 @@ def post():
         post_info = request.get_json()
         posts.append({"title": post_info["title"], "description": post_info["description"]})
     return redirect("/")
+
