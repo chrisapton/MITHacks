@@ -1,18 +1,11 @@
 # Views at the end of Workshop 2
-
-<<<<<<< HEAD
-name="Enlighten Me"
-facts = {"Birthday":"February 29, 1964", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = [{"title": "Topic:", "description": "enter controversial topic"}]
-=======
 from my_app import app, db
 from flask import render_template, request, redirect
 from my_app.models import Fact, Post
 
-name="My Name"
-facts = {"Birthday":"September 18th, 2020", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = []
->>>>>>> 9f9d510c6831cf5ad3639a967c8283baa5a5c08a
+name="Enlighten Me"
+facts = {"Birthday":"February 29, 1964", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
+posts = [{"title": "Topic:", "description": "enter controversial topic"}]
 
 @app.route("/")
 def index():
