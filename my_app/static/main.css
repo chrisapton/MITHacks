@@ -1,6 +1,25 @@
-img {
-    width: 200px;
-    height: 200px;
+#container {
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+#image {
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#text
+{
+    z-index:100;
+    position:absolute;    
+    color:black;
+    font-size:24px;
+    font-weight:bold;
+    left:150px;
+    top:350px;
 }
 
 h1 {
@@ -11,26 +30,13 @@ p {
     font-size: 1.5em;
 }
 
-.facts {
-    font-size: 1.25em;
-}
-
-#color {
-    color: blue;
-}
-
-button {
-    width: 100px;
-    height:  50px;
-}
-
-#container {
-    text-align: center;
-}
 
 
+<<<<<<< HEAD
+=======
 .post {
     margin-top: 75px !important;
     width: 50%;
     margin: auto;
 }
+>>>>>>> 9f9d510c6831cf5ad3639a967c8283baa5a5c08a
