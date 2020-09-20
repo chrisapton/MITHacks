@@ -14,9 +14,12 @@
 
 <body>
   <!----------Header---------->
-
   <div id="container">
     <h1>{{name}}</h1> <!--just says "Enlighten Me"-->
+    
+    <!--image and prompt text-->
+    <div id="sketch-holder"></div>
+
     <h2 hidden id="timer">{{time}}</h2>
     <h2 id="timerDisplay"></h2>
     <script>
@@ -36,16 +39,6 @@
         }
       }, 1000);
     </script>
-
-    <!--image and prompt text-->
-    <div id="sketch-holder"></div>
-    <div id="container">
-
-      <p id="text">
-
-      </p>
-
-    </div>
 
 <!-- Chat box -->
 
