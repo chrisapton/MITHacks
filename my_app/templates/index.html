@@ -57,8 +57,9 @@
         //httpGett("http://localhost:5000/update");
         if (timeLeft === 0) {
             timeLeft = 300;
-            //location.reload();
+
             httpGett("http://localhost:5000/update");
+            location.reload();
            // sleep(2000).then(() => {
            //     console.log(this.debate);
            //     change_question(this.debate);
