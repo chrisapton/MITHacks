@@ -23,26 +23,6 @@
       </p>
         
     </div>
-
-    {% for key, value in facts.items() %}
-      <p class="facts">{{key}}: {{value}}</p>
-    {% endfor %}
-
-    Title: <input type="text" id="title"><br>
-    Description: <input type="text" id="description"><br>
-    <div class="ui button" id="post-button">Post</div>
-    {% for post in posts %}
-      <div class="post">
-        <div class="ui segment">
-          <h3>{{post['title']}}</h3>
-          <p>{{post['description']}}</p>
-        </div>
-      </div>
-    {% endfor %}
-    <p>Click this button for a random cat 🐱</p>
-    <button style="margin-bottom: 10px;"id="cat-button" type="button">CAT</button>
-    <div id="cat-div"></div>
-  </div>
 <!-- Chat box -->
   <h3 style='color: #ccc;font-size: 30px;'>No message yet..</h3>
   <div class="message_holder"></div>
