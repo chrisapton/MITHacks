@@ -9,9 +9,6 @@ from datetime import datetime
 socketio = SocketIO(app)
 
 name="Enlighten Me"
-facts = {"Birthday":"February 29, 1964", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = [{"title": "Topic:", "description": "enter controversial topic"}]
-
 
 @app.route("/")
 def index():
