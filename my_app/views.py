@@ -10,6 +10,10 @@ socketio = SocketIO(app)
 
 name="Enlighten Me"
 counter = 0
+str_of_debates = ["It's better to pour milk before cereal", "ONE PLUS ONE EQUALS 11", "Hotdogs are tacos",
+    "Youtube is better than Netflix", "Brushing your teeth before breakfast is like wiping before pooping",
+     "Shorts should be half the price of pants", "Being too cold is WAY better than being too warm",
+     "Adam and Eve had no belly buttons", "Boneless wings are overpriced chicken nuggets"]
 
 @app.route("/")
 def index():
@@ -43,12 +47,8 @@ def index():
     totalSecs = (curMins * 60) + curSecs
     leftoverSecs = mins5 - totalSecs
     leftoverSecsString = str(leftoverSecs)
-    print(leftoverSecsString)
 
-    str_of_debates = ["It's better to pour milk before cereal", "ONE PLUS ONE EQUALS 11", "Hotdogs are tacos", 
-    "Youtube is better than Netflix", "Brushing your teeth before breakfast is like wiping before pooping",
-     "Shorts should be half the price of pants", "Being too cold is WAY better than being too warm", 
-     "Adam and Eve had no belly buttons", "Boneless wings are overpriced chicken nuggets"]
+
     if counter >= len(str_of_debates):
         counter = 0
     debate = str_of_debates[counter]
