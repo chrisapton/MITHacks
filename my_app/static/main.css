@@ -30,8 +30,8 @@ h1 {
 
 .message_holder {
     background-color: white;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 10px;
     text-align: left;
 }
@@ -40,8 +40,8 @@ h1 {
 }
 .textbox {
     background-color: lightblue;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 10px;
     text-align: left;
 }
