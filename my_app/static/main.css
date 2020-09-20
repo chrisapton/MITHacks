@@ -5,7 +5,7 @@
     position: relative;
 }
 
-#image{
+#image {
     position:absolute;
     left:25%;
     top:0;
@@ -13,8 +13,7 @@
     height:90%;
 }
 
-#text
-{
+#text {
     z-index:100;
     position:absolute;    
     color:black;
@@ -35,9 +34,15 @@ h1 {
     margin-bottom: 10px;
     text-align: left;
 }
+
+.message {
+    width: 500px;
+}
+
 .box {
     background-color: lightblue;
 }
+
 .textbox {
     background-color: lightblue;
     margin-left: 300px;
