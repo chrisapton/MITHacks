@@ -30,7 +30,6 @@ function setup() {
   crowder = loadImage("https://cdn.glitch.com/fc616293-4b24-40ce-a4d1-55b135064e19%2Finset-change_my_mind_meme-001-300x219.jpg?v=1600559576794");
   question = "ONE PLUS ONE EQUALS 11";
   canvas.parent('sketch-holder');
-  // resize image to fit more text
 }
 
 function draw() {
