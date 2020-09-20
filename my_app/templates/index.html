@@ -21,6 +21,8 @@
     <div id="sketch-holder"></div>
 
     <h2 hidden id="timer">{{time}}</h2>
+    <b2 hidden id="debates">{{debates}}</b2>
+    <b2 hidden id="counter">{{counter}}</b2>
     <h2 id="timerDisplay"></h2>
     <script>
       function pad(n, width, z) {
@@ -29,7 +31,11 @@
         return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
       }
       var timeLeft = document.getElementById("timer").innerHTML;
+      var debates = document.getElementById("debates").innerHTML;
+      var counter = document.getElementById("counter").innerHTML;
+      console.log(counter);
       var x = setInterval(function() {
+
         timeLeft -= 1;
         var minsLeft = Math.floor(timeLeft / 60);
         var secsLeft = timeLeft - (minsLeft * 60);
@@ -47,9 +53,11 @@
         else {
           // open chat
         }
+        //httpGett("http://localhost:5000/update");
         if (timeLeft === 0) {
-            change_question("here");
             timeLeft = 300;
+            httpGett("http://localhost:5000/update");
+            change_question("here");
         }
       }, 1000);
     </script>

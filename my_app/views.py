@@ -9,9 +9,11 @@ from datetime import datetime
 socketio = SocketIO(app)
 
 name="Enlighten Me"
+counter = 0
 
 @app.route("/")
 def index():
+    global counter
     """
     [GET]: 
         - args: none
@@ -42,7 +44,11 @@ def index():
     leftoverSecsString = str(leftoverSecs)
     print(leftoverSecsString)
 
-    return render_template("index.html", name=name, facts=fact_dict, posts=post_list, time=leftoverSecsString)
+    str_of_debates = ["test1", "test2", "test3"]
+
+    if(leftoverSecs == 0):
+        counter = counter + 1
+    return render_template("index.html", name=name, facts=fact_dict, posts=post_list, time=leftoverSecsString, debates=str_of_debates, counter=counter)
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')
@@ -99,8 +105,9 @@ def change_facts():
         db.session.commit()
     return redirect("/")
 
-@app.route("/get_time", methods=["GET"])
+@app.route("/update", methods=["GET"])
 def get_time():
+    global counter
     """
     [POST]: 
         - args: none
@@ -109,5 +116,6 @@ def get_time():
         - return: index.html
     """
     if request.method == "GET":
-        print("Get time")
+        counter = counter + 1
+    print("works")
     return redirect("/")

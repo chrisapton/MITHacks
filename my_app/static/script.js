@@ -37,6 +37,14 @@ function change_question(quest) {
     question = quest;
 }
 
+function httpGett(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
 function draw() {
   height = windowHeight/2.7;
   width = height * 1.37 * 1.05;
@@ -45,5 +53,4 @@ function draw() {
   background(crowder);
   rotate(-PI/8);
   text(question,width/6,height*0.77,width/3);
-  console.log(windowWidth, windowHeight);
 }
