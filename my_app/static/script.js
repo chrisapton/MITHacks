@@ -22,7 +22,7 @@ $(document).ready(function() {
 });
 
 let crowder;
-let question;
+let question = "";
 let width = 300;
 let height = 219;
 var canvas;
@@ -30,11 +30,15 @@ function setup() {
   // Code here runs only once
 
   crowder = loadImage("https://cdn.glitch.com/fc616293-4b24-40ce-a4d1-55b135064e19%2Finset-change_my_mind_meme-001-300x219.jpg?v=1600559576794");
-  question = "ONE PLUS ONE EQUALS 11";
 
 }
 function change_question(quest) {
     question = quest;
+    console.log("Question changed to: ", question);
+}
+
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }
 
 function httpGett(theUrl)

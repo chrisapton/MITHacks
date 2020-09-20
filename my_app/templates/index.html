@@ -21,7 +21,7 @@
     <div id="sketch-holder"></div>
 
     <h2 hidden id="timer">{{time}}</h2>
-    <b2 hidden id="debates">{{debates}}</b2>
+    <b2 hidden id="debate">{{debate}}</b2>
     <b2 hidden id="counter">{{counter}}</b2>
     <h2 id="timerDisplay"></h2>
     <script>
@@ -31,8 +31,9 @@
         return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
       }
       var timeLeft = document.getElementById("timer").innerHTML;
-      var debates = document.getElementById("debates").innerHTML;
+      var debate = document.getElementById("debate").innerHTML;
       var counter = document.getElementById("counter").innerHTML;
+      change_question(this.debate);
       console.log(counter);
       var x = setInterval(function() {
 
@@ -56,8 +57,12 @@
         //httpGett("http://localhost:5000/update");
         if (timeLeft === 0) {
             timeLeft = 300;
+            //location.reload();
             httpGett("http://localhost:5000/update");
-            change_question("here");
+           // sleep(2000).then(() => {
+           //     console.log(this.debate);
+           //     change_question(this.debate);
+           // });
         }
       }, 1000);
     </script>

@@ -35,6 +35,7 @@ def index():
 
     db_posts = Post.query.all()
     post_list = [{"title": post.title, "description": post.description} for post in db_posts]
+
     dateTimeObj = datetime.now()
     mins5 = 60 * 5
     curMins = dateTimeObj.minute % 5
@@ -44,11 +45,14 @@ def index():
     leftoverSecsString = str(leftoverSecs)
     print(leftoverSecsString)
 
-    str_of_debates = ["test1", "test2", "test3"]
-
-    if(leftoverSecs == 0):
-        counter = counter + 1
-    return render_template("index.html", name=name, facts=fact_dict, posts=post_list, time=leftoverSecsString, debates=str_of_debates, counter=counter)
+    str_of_debates = ["It's better to pour milk before cereal", "ONE PLUS ONE EQUALS 11", "Hotdogs are tacos", 
+    "Youtube is better than Netflix", "Brushing your teeth before breakfast is like wiping before pooping",
+     "Shorts should be half the price of pants", "Being too cold is WAY better than being too warm", 
+     "Adam and Eve had no belly buttons", "Boneless wings are overpriced chicken nuggets"]
+    if counter >= len(str_of_debates):
+        counter = 0
+    debate = str_of_debates[counter]
+    return render_template("index.html", name=name, facts=fact_dict, posts=post_list, time=leftoverSecsString, debate=debate, counter=counter)
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')
