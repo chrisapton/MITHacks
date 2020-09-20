@@ -30,7 +30,10 @@ h1 {
 
 .message_holder {
     background-color: white;
+    margin-left: 300px;
+    margin-right: 300px;
 }
+
 body {
     background-color: lightblue;
 }
