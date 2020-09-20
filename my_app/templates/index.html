@@ -32,7 +32,7 @@
         var secsLeft = timeLeft - (minsLeft * 60);
         document.getElementById("timerDisplay").innerHTML = minsLeft + ":" + pad(secsLeft, 2);
         if (timeLeft < 0) {
-          window.reload();
+          location.reload();
         }
       }, 1000);
     </script>
