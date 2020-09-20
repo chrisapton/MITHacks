@@ -50,6 +50,7 @@
           // set up voting platform
           // add two buttons for each opinion: i agree, i disagree
           // display how many votes each button has
+          document.getElementById("timerDisplay").style.color = "red";
         }
         else {
           // open chat
@@ -59,6 +60,7 @@
             timeLeft = 300;
 
             httpGett("http://localhost:5000/update");
+            document.getElementById("timerDisplay").style.color = "black";
             location.reload();
            // sleep(2000).then(() => {
            //     console.log(this.debate);
