@@ -5,7 +5,7 @@
     position: relative;
 }
 
-#image {
+#image{
     position:absolute;
     left:25%;
     top:0;
@@ -28,7 +28,7 @@ h1 {
     background-color: lightblue;
 }
 
-form {
+.message_holder {
     background-color: white;
 }
 body {
