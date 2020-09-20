@@ -34,11 +34,27 @@
         var minsLeft = Math.floor(timeLeft / 60);
         var secsLeft = timeLeft - (minsLeft * 60);
         document.getElementById("timerDisplay").innerHTML = minsLeft + ":" + pad(secsLeft, 2);
+        if (timeLeft > 280) {
+          // have voting enabled
+          // chat hidden
+        }
+        else if (timeLeft < 20) {
+          // hide chat
+          // set up voting platform
+          // add two buttons for each opinion: i agree, i disagree
+          // display how many votes each button has
+        }
+        else {
+          // open chat
+        }
         if (timeLeft === 0) {
           location.reload();
         }
       }, 1000);
     </script>
+
+    <!--image and prompt text-->
+    <div id="sketch-holder"></div>
 
 <!-- Chat box -->
 
