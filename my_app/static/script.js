@@ -33,6 +33,9 @@ function setup() {
   question = "ONE PLUS ONE EQUALS 11";
 
 }
+function change_question(quest) {
+    question = quest;
+}
 
 function draw() {
   height = windowHeight/2.7;
