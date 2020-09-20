@@ -28,6 +28,12 @@ h1 {
     background-color: lightblue;
 }
 
+form {
+    background-color: white;
+}
+body {
+    background-color: lightblue;
+}
 p {
     font-size: 1.5em;
 }
