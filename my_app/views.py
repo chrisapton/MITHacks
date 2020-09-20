@@ -3,6 +3,7 @@ from my_app import app, db
 from flask import render_template, request, redirect
 from my_app.models import Fact, Post
 from flask_socketio import SocketIO
+import time
 
 socketio = SocketIO(app)
 
@@ -91,3 +92,15 @@ def change_facts():
         db.session.commit()
     return redirect("/")
 
+@app.route("/get_time", methods=["GET"])
+def get_time():
+    """
+    [POST]: 
+        - args: none
+        - body: 
+            {"fact_name": <str>, "fact_name2":<str> ... }
+        - return: index.html
+    """
+    if request.method == "GET":
+        print("Get time")
+    return redirect("/")
