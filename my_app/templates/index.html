@@ -17,6 +17,26 @@
 
   <div id="container">
     <h1>{{name}}</h1> <!--just says "Enlighten Me"-->
+    <h2 hidden id="timer">{{time}}</h2>
+    <h2 id="timerDisplay"></h2>
+    <script>
+      function pad(n, width, z) {
+        z = z || '0';
+        n = n + '';
+        return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+      }
+      var timeLeft = document.getElementById("timer").innerHTML;
+      var x = setInterval(function() {
+        timeLeft -= 1;
+        var minsLeft = Math.floor(timeLeft / 60);
+        var secsLeft = timeLeft - (minsLeft * 60);
+        document.getElementById("timerDisplay").innerHTML = minsLeft + ":" + pad(secsLeft, 2);
+        if (timeLeft < 0) {
+          location.reload();
+        }
+      }, 1000);
+    </script>
+
     <!--image and prompt text-->
     <div id="sketch-holder"></div>
     <div id="container">
@@ -26,10 +46,10 @@
       </p>
 
     </div>
+
 <!-- Chat box -->
 
-  <div class="message_holder"><h3 style='color: #ccc;font-size: 30px;'>No message yet..</h3>
-
+  <div class="message_holder"><h3 style='color: white;font-size: 30px; background-color: lightblue;'>No message yet..</h3>
 
   </div>
     <form action="" method="POST">
@@ -68,6 +88,7 @@
       }
     })
   </script>
+
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
 </body>

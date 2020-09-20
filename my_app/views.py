@@ -4,12 +4,11 @@ from flask import render_template, request, redirect
 from my_app.models import Fact, Post
 from flask_socketio import SocketIO
 import time
+from datetime import datetime
 
 socketio = SocketIO(app)
 
 name="Enlighten Me"
-facts = {"Birthday":"February 29, 1964", "Favorite Color": "blue", "Favorite Hackathon": "HackMIT"}
-posts = [{"title": "Topic:", "description": "enter controversial topic"}]
 
 @app.route("/")
 def index():
@@ -34,8 +33,16 @@ def index():
 
     db_posts = Post.query.all()
     post_list = [{"title": post.title, "description": post.description} for post in db_posts]
+    dateTimeObj = datetime.now()
+    mins5 = 60 * 5
+    curMins = dateTimeObj.minute % 5
+    curSecs = dateTimeObj.second
+    totalSecs = (curMins * 60) + curSecs
+    leftoverSecs = mins5 - totalSecs
+    leftoverSecsString = str(leftoverSecs)
+    print(leftoverSecsString)
 
-    return render_template("index.html", name=name, facts=fact_dict, posts=post_list)
+    return render_template("index.html", name=name, facts=fact_dict, posts=post_list, time=leftoverSecsString)
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')
