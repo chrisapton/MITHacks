@@ -35,6 +35,16 @@ h1 {
     margin-bottom: 10px;
     text-align: left;
 }
+.box {
+    background-color: lightblue;
+}
+.textbox {
+    background-color: lightblue;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 10px;
+    text-align: left;
+}
 
 body {
     background-color: lightblue;

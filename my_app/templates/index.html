@@ -58,12 +58,14 @@
   <div class="message_holder"><h3 style='color: white;font-size: 30px; background-color: lightblue;'>No message yet..</h3>
 
   </div>
+  <div class="textbox">
     <form action="" method="POST">
+        <input type="text" class="username" placeholder="User Name"/>
+        <input type="text" class="message" placeholder="Messages"/>
+        <input type="submit"/>
+      </form>
+  </div>
 
-      <input type="text" class="username" placeholder="User Name"/>
-      <input type="text" class="message" placeholder="Messages"/>
-      <input type="submit"/>
-    </form>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -90,7 +92,7 @@
       console.log( msg )
       if( typeof msg.user_name !== 'undefined' ) {
         $( 'h3' ).remove()
-        $( 'div.message_holder' ).append( '<div><b style="color: #000">'+msg.user_name+'</b> '+msg.message+'</div>' )
+        $( 'div.message_holder' ).append( '<div class ="box"><b style="color: blue">' +msg.user_name+'</b> '+msg.message+'</div>' )
       }
     })
   </script>
